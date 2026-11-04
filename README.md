@@ -74,3 +74,11 @@ The `configs/MikroTik-1.rsc` through `configs/MikroTik-4.rsc` files are text exp
 ## Reproducibility note
 
 This repository contains the source, captured discovery data, router text exports, and rendered diagram. The original GNS3 project depends on the author's local Windows adapters and QEMU images, so it is not included as a portable, ready-to-run GNS3 project. Recreating the live lab requires equivalent GNS3 nodes, RouterOS images, host-only connectivity, and the addressing described above.
+
+## Actual GNS3 lab screenshot
+
+The screenshot below shows the GNS3 workspace used for this project: four MikroTik CHR routers, three LAN Ethernet switches, six VPCS endpoints, and the Cloud connection to MikroTik-1. This is the actual simulator layout used for the captured discovery data. The GNS3 adapter labels `e0`, `e1`, and `e2` correspond to RouterOS `ether1`, `ether2`, and `ether3` in this lab.
+
+![Actual GNS3 lab topology](docs/gns3_lab_screenshot.png)
+
+The GNS3 project itself is not included because it depends on local Windows host-only adapters and QEMU images. The generated discovery diagram is provided separately above as `docs/topology_corrected.png`.
