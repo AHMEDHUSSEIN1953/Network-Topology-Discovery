@@ -11,6 +11,9 @@ A graduation project that collects network information from four MikroTik CHR ro
 - `discovery.json` — a captured discovery result from the lab.
 - `configs/` — RouterOS text exports for the four MikroTik routers.
 - `docs/topology_corrected.png` — the rendered topology snapshot.
+- `docs/gns3_lab_screenshot.png` — a screenshot of the actual GNS3 canvas.
+- `gns3-project/Network-Topology-Discovery-1.zip` — the GNS3 project package.
+- `docs/LAB_SETUP.md` — requirements and steps to open the GNS3 package and test connectivity.
 
 ![Lab topology](docs/topology_corrected.png)
 
@@ -73,7 +76,7 @@ The `configs/MikroTik-1.rsc` through `configs/MikroTik-4.rsc` files are text exp
 
 ## Reproducibility note
 
-This repository contains the source, captured discovery data, router text exports, and rendered diagram. The original GNS3 project depends on the author's local Windows adapters and QEMU images, so it is not included as a portable, ready-to-run GNS3 project. Recreating the live lab requires equivalent GNS3 nodes, RouterOS images, host-only connectivity, and the addressing described above.
+This repository includes a GNS3 project archive for inspection and reuse, but it is not self-contained or guaranteed to start unchanged on another computer. The archive does not include the base RouterOS CHR image, and its Cloud node refers to the creator's local `Ethernet 3` adapter. The professor must install a compatible CHR image/template and bind Cloud to a suitable host-only adapter. See [LAB_SETUP.md](docs/LAB_SETUP.md) for the exact project settings and address plan.
 
 ## Actual GNS3 lab screenshot
 
@@ -81,4 +84,4 @@ The screenshot below shows the GNS3 workspace used for this project: four MikroT
 
 ![Actual GNS3 lab topology](docs/gns3_lab_screenshot.png)
 
-The GNS3 project itself is not included because it depends on local Windows host-only adapters and QEMU images. The generated discovery diagram is provided separately above as `docs/topology_corrected.png`.
+The GNS3 project package is provided at [`gns3-project/Network-Topology-Discovery-1.zip`](gns3-project/Network-Topology-Discovery-1.zip). The generated discovery diagram is provided separately above as `docs/topology_corrected.png`.
